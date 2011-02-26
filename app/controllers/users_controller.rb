@@ -46,6 +46,7 @@ class UsersController < ApplicationController
 
     @title = "Edit User"
     render 'edit'
+#      redirect_to @user, :flash => {:error => "Profile Can Not Be Updated"}
     end
   end
 
@@ -55,10 +56,7 @@ class UsersController < ApplicationController
   end
 
   private
-  def authenticate
-    deny_access unless signed_in?
 
-  end
 
   def correct_user
     @user = User.find(params[:id])

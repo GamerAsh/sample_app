@@ -207,7 +207,7 @@ describe UsersController do
       response.should have_selector('title', :content =>"Edit User")
     end
 
-    it "should have alink to change gravatat" do
+    it "should have alink to change gravatar" do
       get :edit, :id => @user
       response.should have_selector('a', :href => 'http://gravatar.com/emails',
                                          :content => 'Change')
@@ -235,6 +235,10 @@ describe UsersController do
         put :update, :id => @user, :user =>@attr
         response.should have_selector('title', :content=> "Edit User")
       end
+#      it "should have flash msg" do
+#        put :update, :id => @user, :user => @attr
+#        flash[:error].should =~ /Profile Can Not Be Updated/i
+#      end
     
     end
 

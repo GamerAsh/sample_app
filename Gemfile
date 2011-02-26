@@ -7,6 +7,7 @@ gem 'rails', '3.0.4'
 
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'will_paginate', '3.0.pre'
 
 
 # Use unicorn as the web server
@@ -29,6 +30,7 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
+    gem 'faker', '0.3.1'
     gem 'ZenTest', '4.5.0'
     gem 'rspec-rails', '2.5.0'
     gem 'rspec', '2.5.0'
